@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Relationship Management</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f2f2f2;
+    }
+    .wrapper {
+      display: flex;
+    }
+    .sidebar {
+      width: 250px;
+      background: #6a1b9a;
+      color: white;
+      padding: 20px;
+      height: 100vh;
+      position: fixed;
+    }
+    .sidebar h2 {
+      margin-bottom: 30px;
+    }
+    .sidebar a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 15px 0;
+    }
+    .main {
+      margin-left: 260px;
+      padding: 30px;
+      width: calc(100% - 250px);
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    .search-filter {
+      margin-bottom: 20px;
+    }
+    .search-filter input {
+      padding: 10px;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 15px;
+      border-bottom: 1px solid #eee;
+      text-align: left;
+    }
+    th {
+      background: #6a1b9a;
+      color: white;
+    }
+    .btn {
+      background-color: #6a1b9a;
+      color: white;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="sidebar">
+    <h2>Purple</h2>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="inventory.html">Inventory Management</a>
+    <a href="supplier.html">Supplier Management</a>
+    <a href="orders.html">Order Management</a>
+    <a href="delivery.html">Delivery Management</a>
+    <a href="CMR.html">Customer Relationship</a>
+    <a href="#">Employee Management</a>
+  </div>
+
+  <div class="main">
+    <h1>Customer Relationship Management</h1>
+
+    <div class="search-filter">
+      <input type="text" placeholder="Search by Customer Name or ID">
+      <button class="btn">Search</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Customer ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Total Orders</th>
+          <th>Last Order</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>CUST1001</td>
+          <td>Priya Sharma</td>
+          <td>priya@example.com</td>
+          <td>+91 9876543211</td>
+          <td>5</td>
+          <td>2025-04-28</td>
+          <td>
+            <button class="btn">View</button>
+            <button class="btn">Edit</button>
+          </td>
+        </tr>
+        <tr>
+          <td>CUST1002</td>
+          <td>Ravi Yadav</td>
+          <td>ravi@example.com</td>
+          <td>+91 9123456789</td>
+          <td>3</td>
+          <td>2025-04-27</td>
+          <td>
+            <button class="btn">View</button>
+            <button class="btn">Edit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>

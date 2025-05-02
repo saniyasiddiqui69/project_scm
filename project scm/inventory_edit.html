@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Inventory Item</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f8f9fa;
+    }
+    .wrapper {
+      display: flex;
+    }
+    .sidebar {
+      width: 250px;
+      background: #6a1b9a;
+      color: white;
+      padding: 20px;
+      height: 100vh;
+      position: fixed;
+    }
+    .sidebar h2 {
+      margin-bottom: 30px;
+    }
+    .sidebar a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 15px 0;
+    }
+    .main {
+      margin-left: 260px;
+      padding: 30px;
+      width: calc(100% - 250px);
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      max-width: 600px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    .btn {
+      background-color: #6a1b9a;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Admine Dashboard</h2>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="inventory.html">Inventory Management</a>
+    <a href="supplier.html">Supplier Management</a>
+    <a href="orders.html">Order Management</a>
+    <a href="delivery.html">Delivery Management</a>
+    <a href="CMR.html">Customer Relationship</a>
+    <a href="#">Employee Management</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <h1>Edit Inventory Item</h1>
+    <form action="#" method="POST">
+      <label for="name">Name of the item</label>
+      <input type="text" id="name" name="name" value="Steel Rods" required>
+
+      <label for="category">Category</label>
+      <select id="category" name="category" required>
+        <option value="Raw Material" selected>Raw Material</option>
+        <option value="Finished Product">Finished Product</option>
+      </select>
+
+      <label for="quantity">Quantity</label>
+      <input type="number" id="quantity" name="quantity" value="50" required>
+
+      <label for="threshold">Threshold</label>
+      <input type="number" id="threshold" name="threshold" value="30" required>
+
+      <label for="unit">Unit</label>
+      <input type="text" id="unit" name="unit" value="pieces" required>
+
+      <label for="last_updated">Last Updated</label>
+      <input type="date" id="last_updated" name="last_updated" value="2025-04-29" required>
+
+      <button class="btn" type="submit">Update Item</button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
